@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:foodhub/Screens/Home/Pages/cart_screen.dart';
 import 'package:foodhub/Screens/Home/Pages/home_screen.dart';
+import 'package:foodhub/Screens/Home/Pages/order_screen.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -14,8 +15,8 @@ class _HomeState extends State<Home> {
   int _selectedIndex = 0;
   static const List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
+    OrderScreen(),
     CartScreen(),
-    Text('Order', style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
   ];
 
   void _onItemTapped(int index) {

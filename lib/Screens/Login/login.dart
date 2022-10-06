@@ -2,6 +2,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:foodhub/Component/ink_well_custom.dart';
+import 'package:foodhub/Screens/Home/home.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -103,6 +104,8 @@ class _LoginState extends State<Login> {
                             icon: const Text(''),
                             label: const Text("Login"),
                             onPressed: (){
+                              Navigator.pushReplacement(context,
+                                  MaterialPageRoute(builder: (context) => const Home()));
                             },
                           ),
                         ),

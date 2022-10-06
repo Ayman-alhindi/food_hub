@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:foodhub/Screens/Home/home.dart';
+import 'package:foodhub/Screens/Splashscreen/splash.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         primary: const Color(0xFFFE724C),
       ),
       ),
-      home:  const Home(),
+      home:  const Splash(),
     );
   }
 }

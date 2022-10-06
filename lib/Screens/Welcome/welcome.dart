@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:foodhub/Screens/Login/login.dart';
 
 class Welcome extends StatefulWidget {
   const Welcome({Key? key}) : super(key: key);
@@ -135,16 +136,22 @@ class _WelcomeState extends State<Welcome> {
                   ),
                   const SizedBox(height: 20),
                   Row(
-                    children: const [
-                      Text(
+                    children:  [
+                      const Text(
                         "already have an account ?",
-                        style: TextStyle(color: Colors.white),
+                        style:  TextStyle(color: Colors.white),
                       ),
-                      Text("Sign In",
-                          style: TextStyle(
-                            color: Colors.white,
-                            decoration: TextDecoration.underline,
-                          )),
+                      InkWell(
+                        onTap: (){
+                          Navigator.pushReplacement(context,
+                              MaterialPageRoute(builder: (context) =>  const Login()));
+                        },
+                        child: const Text("Sign In",
+                            style: TextStyle(
+                              color: Colors.white,
+                              decoration: TextDecoration.underline,
+                            )),
+                      ),
                     ],
                   )
                 ],
